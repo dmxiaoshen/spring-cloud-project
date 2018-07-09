@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: eureka-server
+
+server:
+  port: 8001
+
+security:
+  user:
+    name: dmxiaoshen
+    password: 123
+
+eureka:
+  instance:
+    prefer-ip-address: true
+    hostname: eureka-master
+  client:
+    register-with-eureka: true
+    serviceUrl:
+      defaultZone: http://dmxiaoshen:123@eureka-slave:8002/eureka
