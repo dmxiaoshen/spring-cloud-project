@@ -1,0 +1,29 @@
+server:
+  port: 8801
+spring:
+  application:
+    name: config-center
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://rep.360taihe.com/fengdai/env.git
+          username: hushengen
+          password: hsg123456
+          default-label: master
+encrypt:
+  key: ueuk%33!
+security:
+  basic:
+    enabled: true
+  user:
+    name: hushengen
+    password: 123456
+
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    serviceUrl:
+      defaultZone: http://dmxiaoshen:123@eureka-master:8001/eureka,http://dmxiaoshen:123@eureka-slave:8002/eureka
+    register-with-eureka: true
