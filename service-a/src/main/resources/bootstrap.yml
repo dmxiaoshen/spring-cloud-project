@@ -3,9 +3,9 @@ spring:
     name: ft-a
   cloud:
     config:
-      enabled: true
+      enabled: false
       discovery:
-        enabled: true
+        enabled: false
         service-id: config-center
       username: hushengen
       password: 123456
@@ -17,6 +17,9 @@ eureka:
     prefer-ip-address: true
   client:
     service-url:
-      defaultZone: http://dmxiaoshen:123@eureka-master:8001/eureka,http://dmxiaoshen:123@eureka-slave:8002/eureka
-      #defaultZone: http://dmxiaoshen:123@localhost:8888/eureka
+      #defaultZone: http://dmxiaoshen:123@eureka-master:8001/eureka,http://dmxiaoshen:123@eureka-slave:8002/eureka
+      defaultZone: http://dmxiaoshen:123@localhost:8888/eureka
     register-with-eureka: true
+management:
+  security:
+    enabled: false
