@@ -16,5 +16,7 @@
         <module>service-a</module>
         <module>service-b</module>
         <module>service-c</module>
+        <module>spring-boot-admin</module>
+        <module>zuul</module>
     </modules>
 </project>

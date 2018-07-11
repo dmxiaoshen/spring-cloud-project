@@ -1,17 +1,8 @@
+server:
+  port: 9601
 spring:
   application:
-    name: ft-a
-  cloud:
-    config:
-      enabled: true
-      discovery:
-        enabled: true
-        service-id: config-center
-      username: hushengen
-      password: 123456
-      label: master
-server:
-  port: 9001
+    name: api-getway
 eureka:
   instance:
     prefer-ip-address: true
@@ -20,6 +11,6 @@ eureka:
       #defaultZone: http://dmxiaoshen:123@eureka-master:8001/eureka,http://dmxiaoshen:123@eureka-slave:8002/eureka
       defaultZone: http://dmxiaoshen:123@localhost:8888/eureka
     register-with-eureka: true
-management:
-  security:
-    enabled: false
+zuul:
+  routes:
+   ft-a: /serviceA/**
