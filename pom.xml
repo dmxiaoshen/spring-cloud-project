@@ -12,5 +12,9 @@
 
     <modules>
         <module>eureka-server</module>
+        <module>config-center</module>
+        <module>service-a</module>
+        <module>service-b</module>
+        <module>service-c</module>
     </modules>
 </project>
